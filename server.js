@@ -1,12 +1,12 @@
 const express =  require('express');
-// const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const app = express();
 
 // parse application/x-www-form-urlencoded
-// app.uuse(bodyParser.urlencoded({ extended; false }))
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
-// app.use(bodyParser.json())
+app.use(bodyParser.json())
 
 
 app.get('/', function(req, res){ // Aqui indicamos una funcion get, la cual pide 2 parametros, la url y la funcion como tal (el req es solicitar algo del cliente) y (el res, es la respuesta del servidor)
